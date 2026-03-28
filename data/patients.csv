@@ -1,1 +1,13 @@
-
+patient_id,age_group,sex,insurance_type
+P001,Adult,F,Public
+P002,Elderly,M,Public
+P003,Adult,M,Private
+P004,Elderly,F,Public
+P005,Adult,F,Self-Pay
+P006,Adult,M,Public
+P007,Elderly,F,Private
+P008,Adult,M,Public
+P009,Elderly,M,Public
+P010,Adult,F,Private
+P011,Adult,M,Public
+P012,Elderly,F,Self-Pay
