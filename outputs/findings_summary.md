@@ -9,7 +9,7 @@ The purpose of the findings summary is to support structured review by grouping 
 - documentation-quality
 - safety-sensitive medication review flags
 
-This summary does **not** make clinical decisions. It highlights records that may require clarification, documentation review, or closer pharmacist-facing evaluation.
+This summary does **not** make clinical decisions. It highlights records that may require clarification, documentation review, or closer pharmacist-led review.
 
 ---
 
