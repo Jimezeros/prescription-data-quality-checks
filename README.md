@@ -35,13 +35,13 @@ The project is designed to demonstrate realistic data quality review logic in a 
 ---
 
 ## Project Structure
-This repository contains:
+This repository is intended to contain:
 
-- a synthetic **Patients** table
-- a synthetic **Prescriptions** table
-- Python-based field and rule checks
-- SQL-based relational and duplication checks
-- a findings-oriented summary of flagged data quality issues
+- `data/` synthetic Patients and Prescriptions tables
+- `notebooks/` Python-based data quality checks
+- `sql/` SQL validation queries
+- `outputs/` findings summary examples
+- `README.md` project overview and scope
 
 ---
 
@@ -106,6 +106,19 @@ It is a small portfolio project focused on structured data quality review.
 2. Run the Python notebook or script for field-level checks
 3. Run the SQL queries for relational and duplication checks
 4. Review the generated findings summary
+
+---
+
+## Findings Summary Example
+Example flagged issues may include:
+
+- **High Risk:** Quantity dispensed does not plausibly match dosage frequency and duration.
+- **High Risk:** Repeat prescription issued too early for the same patient and active ingredient.
+- **Medium Risk:** Diagnosis code does not align with diagnosis text.
+- **Medium Risk:** Therapy switch appears without explanatory physician comment.
+- **Low Risk:** Frequency notation is inconsistent across similar prescription records.
+
+This kind of output is intended to support structured review, not clinical decision-making.
 
 ---
 
