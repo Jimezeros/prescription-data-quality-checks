@@ -29,10 +29,10 @@ print(f"Patients rows: {len(patients)}")
 print(f"Prescriptions rows: {len(prescriptions)}")
 
 print("\n=== PATIENTS INFO ===")
-print(patients.info())
+patients.info()
 
 print("\n=== PRESCRIPTIONS INFO ===")
-print(prescriptions.info())
+prescriptions.info()
 
 print("\n=== PATIENTS SAMPLE ===")
 print(patients.head())
@@ -44,7 +44,7 @@ print("\n=== MISSING VALUES (PRESCRIPTIONS) ===")
 print(prescriptions.isna().sum())
 
 # -----------------------------
-# Helper functions
+# Helper function
 # -----------------------------
 def normalize_text(value):
     """Normalize text for safer comparisons."""
@@ -179,7 +179,7 @@ if not date_inconsistency.empty:
     )
 
 # -----------------------------
-# Optional: summary dictionary
+# Summary
 # -----------------------------
 summary = {
     "missing_dosage": len(missing_dosage),
