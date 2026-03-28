@@ -1,0 +1,16 @@
+prescription_id,patient_id,prescriber_id,issue_date,dispense_date,drug_name,active_ingredient,dosage_value,dosage_unit,frequency,duration_days,quantity_dispensed,diagnosis_code,diagnosis_text,prescription_type,physician_comment,reimbursement_flag,refill_window_days
+RX001,P001,DR001,2026-01-10,2026-01-10,Flagyl,Metronidazole,500,mg,three times daily,7,21,K52,Gastroenteritis,Acute,Take after meals,Eligible,30
+RX002,P002,DR002,2026-01-12,2026-01-13,Olmetec,Olmesartan,20,mg,once daily,30,30,I10,Essential hypertension,Chronic,Continue current therapy,Eligible,30
+RX003,P003,DR003,2026-01-15,2026-01-14,Deltacortril,Prednisolone,20,mg,twice daily,5,10,J02,Pharyngitis,Acute,Short course,Eligible,30
+RX004,P004,DR004,2026-01-18,2026-01-18,Nexium,Esomeprazole,40,MG,once daily,30,30,K21,Gastro-esophageal reflux disease,Repeat,,Eligible,30
+RX005,P005,DR005,2026-01-20,2026-01-21,Glucophage,Metformin,500,mg,twice daily,30,60,E11,Type 2 diabetes mellitus,Chronic,Continue current therapy,Eligible,30
+RX006,P006,DR006,2026-01-22,2026-01-22,Crestor,Rosuvastatin,10,mg,1x/day,30,30,E78,Hyperlipidemia,Chronic,,Eligible,30
+RX007,P002,DR002,2026-01-25,2026-01-25,Olmetec,Olmesartan,20,mg,once daily,30,30,I10,Essential hypertension,Chronic,,Eligible,30
+RX008,P007,DR007,2026-01-26,2026-01-27,Flagyl,Metronidazole,,mg,three times daily,7,21,N39,Urinary tract infection,Acute,Take after food,Eligible,30
+RX009,P008,DR008,2026-01-28,2026-01-28,Deltacortril,Prednisolone,16,mg,BID,5,28,J45,Asthma exacerbation,Acute,Taper if needed,Eligible,30
+RX010,P009,DR009,2026-01-29,2026-01-29,Nexium,Esomeprazole,40,milligram,once daily,30,60,I10,Essential hypertension,Repeat,Long-term,Review Needed,30
+RX011,P010,DR010,2026-02-01,2026-02-01,Glucophage,Metformin,850,mg,twice daily,30,30,E11,Type 2 diabetes mellitus,Chronic,Continue treatment,Eligible,30
+RX012,P011,DR011,2026-02-03,2026-02-03,Crestor,Rosuvastatin,20,mg,once daily,30,30,E11,Type 2 diabetes mellitus,Chronic,,Eligible,30
+RX013,P005,DR005,2026-02-05,2026-02-05,Glucophage,Metformin,500,mg,twice daily,30,60,E11,Type 2 diabetes mellitus,Chronic,,Eligible,30
+RX014,P012,DR012,2026-02-06,2026-02-06,Olmetec,Olmesartan,20,mg,once daily,30,30,I10,Essential hypertension,Chronic,Continue current therapy,,30
+RX015,P002,DR013,2026-02-08,2026-02-08,Cozaar,Losartan,50,mg,once daily,30,30,I10,Essential hypertension,Chronic,,Eligible,30
