@@ -77,7 +77,7 @@ if not missing_dosage.empty:
     )
 
 # -----------------------------
-# Check 2: Inconsistent dosage unit formatting
+# Check 2: Unmapped or non-standard dosage unit values
 # -----------------------------
 prescriptions["dosage_unit_normalized"] = prescriptions["dosage_unit"].apply(normalize_text)
 
@@ -95,24 +95,21 @@ valid_unit_map = {
 
 prescriptions["dosage_unit_standardized"] = prescriptions["dosage_unit_normalized"].map(valid_unit_map)
 
-inconsistent_unit_formatting = prescriptions[
+invalid_or_unmapped_units = prescriptions[
     prescriptions["dosage_unit_normalized"].notna()
-    & (
-        prescriptions["dosage_unit_normalized"] != prescriptions["dosage_unit_standardized"]
-    )
+    & prescriptions["dosage_unit_standardized"].isna()
 ].copy()
 
-print("\n=== CHECK 2: INCONSISTENT DOSAGE UNIT FORMATTING ===")
-print(f"Flagged rows: {len(inconsistent_unit_formatting)}")
-if not inconsistent_unit_formatting.empty:
+print("\n=== CHECK 2: UNMAPPED OR NON-STANDARD DOSAGE UNIT VALUES ===")
+print(f"Flagged rows: {len(invalid_or_unmapped_units)}")
+if not invalid_or_unmapped_units.empty:
     print(
-        inconsistent_unit_formatting[
+        invalid_or_unmapped_units[
             [
                 "prescription_id",
                 "drug_name",
                 "dosage_value",
                 "dosage_unit",
-                "dosage_unit_standardized",
             ]
         ]
     )
@@ -183,7 +180,7 @@ if not date_inconsistency.empty:
 # -----------------------------
 summary = {
     "missing_dosage": len(missing_dosage),
-    "inconsistent_unit_formatting": len(inconsistent_unit_formatting),
+    "invalid_or_unmapped_units": len(invalid_or_unmapped_units),
     "inconsistent_frequency_notation": len(inconsistent_frequency),
     "dispense_date_before_issue_date": len(date_inconsistency),
 }
